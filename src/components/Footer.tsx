@@ -65,6 +65,9 @@ const Footer = () => {
                 <Link to="/donate" className="text-gray-600 hover:text-primary-blue transition-colors">Donate</Link>
               </li>
               <li>
+                <Link to="/call-us" className="text-gray-600 hover:text-primary-blue transition-colors">Call Us</Link>
+              </li>
+              <li>
                 <Link to="/careers" className="text-gray-600 hover:text-primary-blue transition-colors">Careers</Link>
               </li>
             </ul>
@@ -102,7 +105,7 @@ const Footer = () => {
               </li>
               <li className="flex">
                 <Phone className="h-5 w-5 text-primary-blue mr-3 flex-shrink-0" />
-                <span className="text-gray-600">(646) 619-6400</span>
+                <Link to="/call-us" className="text-gray-600 hover:text-primary-blue transition-colors">(646) 619-6400</Link>
               </li>
               <li className="flex">
                 <Mail className="h-5 w-5 text-primary-blue mr-3 flex-shrink-0" />

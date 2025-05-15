@@ -56,9 +56,11 @@ const Header = () => {
               <Search className="h-4 w-4" />
             </Button>
             
-            <Button size="sm" className="hidden md:flex items-center bg-primary-green hover:bg-primary-green/90">
-              <Phone className="h-4 w-4 mr-2" />
-              <span>Call Us</span>
+            <Button size="sm" asChild className="hidden md:flex items-center bg-primary-green hover:bg-primary-green/90">
+              <Link to="/call-us">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>Call Us</span>
+              </Link>
             </Button>
             
             <Button size="sm" className="hidden md:inline-flex bg-primary-blue hover:bg-primary-blue/90">
@@ -101,13 +103,18 @@ const Header = () => {
             <Link to="/donate" className="font-medium hover:text-primary-blue transition-colors py-2">
               Donate
             </Link>
+            <Link to="/call-us" className="font-medium hover:text-primary-blue transition-colors py-2">
+              Call Us
+            </Link>
             <div className="pt-4 flex flex-col space-y-3">
               <Button className="w-full bg-primary-blue hover:bg-primary-blue/90">
                 Find Help
               </Button>
-              <Button className="w-full bg-primary-green hover:bg-primary-green/90">
-                <Phone className="h-4 w-4 mr-2" />
-                Call Us
+              <Button asChild className="w-full bg-primary-green hover:bg-primary-green/90">
+                <Link to="/call-us">
+                  <Phone className="h-4 w-4 mr-2" />
+                  Call Us
+                </Link>
               </Button>
               <Button variant="outline" className="w-full">
                 <Search className="h-4 w-4 mr-2" />

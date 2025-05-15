@@ -100,7 +100,7 @@ const TestimonialsSection = () => {
                 <div className="p-1">
                   <div className="overflow-hidden rounded-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1666214280580-7f7713c8888d?auto=format&fit=crop&q=80" 
+                      src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" 
                       alt="Healthcare workshop" 
                       className="w-full h-64 object-cover"
                     />

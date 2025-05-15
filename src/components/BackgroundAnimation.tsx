@@ -85,8 +85,10 @@ const BackgroundAnimation = () => {
           bubble.x, bubble.y, bubble.radius
         );
         
-        gradient.addColorStop(0, bubble.color.replace(')', ', ' + bubble.opacity + ')'));
-        gradient.addColorStop(1, bubble.color.replace(')', ', 0)'));
+        // Fix: Parse the color values correctly
+        const colorBase = bubble.color.substring(0, bubble.color.lastIndexOf(')'));
+        gradient.addColorStop(0, `${colorBase}, ${bubble.opacity})`);
+        gradient.addColorStop(1, `${colorBase}, 0)`);
         
         ctx.fillStyle = gradient;
         ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);

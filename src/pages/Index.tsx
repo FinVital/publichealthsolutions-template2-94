@@ -7,12 +7,14 @@ import ServicesSection from '../components/ServicesSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import DonationSection from '../components/DonationSection';
 import ChatAssistant from '../components/ChatAssistant';
+import BackgroundAnimation from '../components/BackgroundAnimation';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative overflow-hidden">
+      <BackgroundAnimation />
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <Hero />
         <ServicesSection />
         <TestimonialsSection />

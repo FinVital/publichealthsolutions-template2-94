@@ -4,12 +4,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ChatAssistant from '../components/ChatAssistant';
 import DonationSection from '../components/DonationSection';
+import BackgroundAnimation from '../components/BackgroundAnimation';
 
 const Donate = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative overflow-hidden">
+      <BackgroundAnimation />
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <section className="bg-secondary-softBlue py-16">
           <div className="container-custom">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-blue font-heading mb-6">Support Our Mission</h1>

@@ -85,10 +85,21 @@ const BackgroundAnimation = () => {
           bubble.x, bubble.y, bubble.radius
         );
         
-        // Fix: Parse the color values correctly
-        const colorBase = bubble.color.substring(0, bubble.color.lastIndexOf(')'));
-        gradient.addColorStop(0, `${colorBase}, ${bubble.opacity})`);
-        gradient.addColorStop(1, `${colorBase}, 0)`);
+        // Extract RGB values from the rgba string
+        const rgbaMatch = bubble.color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([.\d]+))?\)/);
+        if (rgbaMatch) {
+          const r = rgbaMatch[1];
+          const g = rgbaMatch[2];
+          const b = rgbaMatch[3];
+          
+          // Create new rgba colors with appropriate opacity
+          gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, ${bubble.opacity})`);
+          gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+        } else {
+          // Fallback to default colors if parsing fails
+          gradient.addColorStop(0, 'rgba(211, 228, 253, 0.4)');
+          gradient.addColorStop(1, 'rgba(211, 228, 253, 0)');
+        }
         
         ctx.fillStyle = gradient;
         ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);

@@ -39,15 +39,110 @@ const About = () => {
               </div>
             </div>
             
-            {/* Placeholder for actual about content */}
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-              <h2 className="text-2xl font-bold text-primary-blue mb-4">Our Story</h2>
-              <p className="text-gray-700 mb-4">
-                This page would contain detailed information about the organization, including its history, leadership team, achievements, and vision for the future. It would also include information about partnerships and funders.
-              </p>
-              <p className="text-gray-500 italic">
-                Note: This is a placeholder. In a complete implementation, this section would contain the organization's full story.
-              </p>
+            {/* Team images */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-primary-blue mb-8 text-center">Our Team</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80"
+                    alt="Healthcare professional"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">Dr. Sarah Johnson</h3>
+                    <p className="text-gray-600">Chief Medical Director</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
+                    alt="Program director"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">Michael Torres</h3>
+                    <p className="text-gray-600">Community Programs Director</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80"
+                    alt="Healthcare administrator"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">Amara Williams</h3>
+                    <p className="text-gray-600">Chief Operating Officer</p>
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80"
+                    alt="Nutritional specialist"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">Leila Chen</h3>
+                    <p className="text-gray-600">Nutritional Programs Lead</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 lg:col-span-1">
+                <h2 className="text-2xl font-bold text-primary-blue mb-4">Our Values</h2>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <span className="bg-primary-blue/10 text-primary-blue p-2 rounded-full mr-3">✓</span>
+                    <div>
+                      <h3 className="font-bold">Equity</h3>
+                      <p className="text-gray-600">We believe all New Yorkers deserve equal access to quality healthcare.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-primary-blue/10 text-primary-blue p-2 rounded-full mr-3">✓</span>
+                    <div>
+                      <h3 className="font-bold">Innovation</h3>
+                      <p className="text-gray-600">We develop creative solutions to complex health problems.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="bg-primary-blue/10 text-primary-blue p-2 rounded-full mr-3">✓</span>
+                    <div>
+                      <h3 className="font-bold">Compassion</h3>
+                      <p className="text-gray-600">We serve with empathy and understanding for every individual.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 lg:col-span-2">
+                <h2 className="text-2xl font-bold text-primary-blue mb-4">Our Impact</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-gray-700 mb-4">
+                      Our programs directly impact thousands of families throughout New York City's five boroughs. We focus on areas with the greatest health disparities and work to provide accessible solutions.
+                    </p>
+                    <img
+                      src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80"
+                      alt="Community outreach program"
+                      className="w-full h-48 rounded-lg object-cover"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&q=80"
+                      alt="Healthcare consultation"
+                      className="w-full h-48 rounded-lg object-cover mb-4"
+                    />
+                    <p className="text-gray-700">
+                      Through partnerships with over 200 community organizations, we've expanded our reach and created sustainable health improvements across diverse neighborhoods.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

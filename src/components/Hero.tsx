@@ -64,6 +64,33 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Additional Image Gallery */}
+      <div className="container-custom py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <img 
+              src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=80" 
+              alt="Mother and child receiving healthcare" 
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <img 
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80" 
+              alt="Healthcare professional with patient" 
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="overflow-hidden rounded-lg shadow-md">
+            <img 
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80" 
+              alt="Community health outreach" 
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
